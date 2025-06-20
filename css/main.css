@@ -1,135 +1,353 @@
-@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* ==================== Шрифти ==================== */
+@font-face {
+  font-family: 'e-Ukraine Head';
+  src: url('../fonts/e-UkraineHead-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'e-Ukraine Text';
+  src: url('../fonts/e-UkraineText-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'e-Ukraine Text';
+  src: url('../fonts/e-UkraineText-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* ==================== Загальні стилі ==================== */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Tinos", serif;
-    font-weight: 400;
-    color: #fff;
-    font-size: 16px;
+  font-family: 'e-Ukraine Text', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: inherit;
 }
 
-img {
-    max-width: 35%;
+/* ==================== Хедер ==================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #dcdcdc;
 }
 
-.wrapper{
-    background: #6A3AB0;
-    background: linear-gradient(90deg,rgba(106, 58, 176, 1) 25%, rgba(0, 123, 255, 1) 65%, rgba(255, 255, 255, 1) 100%);
-    width: 100%;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
- .container{
-    width: 1400px;
-    margin: 0 auto;
- }
-
- header {
-    padding: 50px 0;
- }
-
- header .logo{
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 29px;
-    font-weight: 800;
- }
-
- header nav {
-    float: right;
-    width: 50%;
- }
-
- header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
- }
-
- header nav ul li{
-    display: inline-block;
- }
-
- header nav ul li a{
-    color: #fff
- }
-
- header nav ul li.active::after {
-    content:'';
-    display: block;
-    width: 40px;
-    height: 5px;
-    background: #FF0000;
-    border-radius: 10px;
-    position: relative;
-    top: 10px;
-    left: -15px;
- }
-
- header nav ul li:not(.active):not(.btn) a:hover {
-    border-bottom: 5px solid #fff;
- }
-
- header nav ul li.btn a {
-    background: #FF0000;
-    padding: 9px 17px;
-    border-radius: 5px;
-    transition: all 500ms ease;
- }
-
- header nav ul li.btn a:hover {
-    background: #3d3737;
- }
-
- .hero {
-    padding-bottom: 100px;
-    position: relative;
+.logo img {
+  height: 90px;
 }
 
-.hero--info {
-    width: 530px;
-    padding-top: 70px;
+.logo span {
+  font-family: 'e-Ukraine Head';
+  font-size: 24px;
+  font-weight: 500;
+  color: #0057B7;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  font-weight: 500;
+}
+
+nav ul li a {
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #0057B7;
+}
+
+nav ul .btn a {
+  background-color: #0057B7;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+nav ul .btn a:hover {
+  background-color: #003f8f;
+}
+
+/* ==================== Hero ==================== */
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  padding: 60px 0;
 }
 
 .hero--info h2 {
-    font-size: 20px;
-    font-weight: 600;
+  color: #0057B7;
+  font-family: 'e-Ukraine Head';
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
 .hero--info h1 {
-    font-size: 50px;
-    font-weight: 600;
+  font-family: 'e-Ukraine Head';
+  font-size: 42px;
+  margin-bottom: 20px;
 }
 
 .hero--info p {
-    font-weight: 500;
-    line-height: 170%;
-    margin: 30px 0;
+  max-width: 600px;
+  font-size: 18px;
+  margin-bottom: 25px;
 }
 
 .hero--info .btn {
-    background: #FF0000;
-    color: #fff;
-    border-radius: 100px;
-    padding: 15px 30px; 
-    transition: all 500ms ease;
-    font-size: 15px;
+  background-color: #0057B7;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .hero--info .btn:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+  background-color: #003f8f;
 }
 
-.hero img {
-    position: absolute;
-    top: 0px;
-    right: 0;
+/* ==================== SmartTransit Description ==================== */
+.smarttransit-description {
+  padding: 60px 0;
+}
+
+.smarttransit-description h2 {
+  font-family: 'e-Ukraine Head';
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.smarttransit-description h2 .highlight {
+  color: #0057B7;
+}
+
+.smarttransit-description h3 {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #0057B7;
+}
+
+.smarttransit-description ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.smarttransit-description li {
+  margin-bottom: 12px;
+  font-size: 17px;
+}
+
+.why-important li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ==================== Footer ==================== */
+.footer {
+  background-color: #BEBEBE;
+  padding: 40px 0 20px;
+  color: #1a1a1a;
+}
+
+.footer--content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer--column h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #0057B7;
+}
+
+.footer--column h3.footer--logo {
+  font-family: 'e-Ukraine Head';
+  font-size: 22px;
+  color: #0057B7;
+}
+
+.footer--bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ==================== Адаптивність ==================== */
+/* ДЛЯ ТЕЛЕФОНІВ */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  flex-direction: column; 
+  gap: 15px; 
+  align-items: center; 
+  padding: 20px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.hero--info h1 {
+  font-size: 32px; 
+  text-align: center;
+}
+
+.hero--info p {
+  font-size: 16px;
+  line-height: 1.6; 
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.footer--content {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 30px 0;
+  border-top: 1px solid #ddd;
+}
+
+
+
+/* 2. АДАПТАЦІЯ ДЛЯ ПЛАНШЕТІВ */
+@media screen and (min-width: 768px) {
+
+  .container {
+    width: 85%;
+  }
+
+  nav ul {
+    flex-direction: row; 
+    justify-content: center;
+    gap: 30px; 
+  }
+
+  .hero--info h1 {
+    font-size: 48px; 
+  }
+
+  .hero--info p {
+    font-size: 18px;
+  }
+
+  .cards-container {
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+  }
+
+  .card {
+    width: calc(50% - 20px); 
+  }
+
+  .footer--content {
+    flex-direction: row; 
+    justify-content: space-around; 
+    text-align: left;
+  }
+}
+
+
+
+/* 3. АДАПТАЦІЯ ДЛЯ НОУТБУКІВ І ДЕСКТОПІВ */
+@media screen and (min-width: 1024px) {
+
+  .container {
+    width: 80%;
+    max-width: 1200px; 
+  }
+
+  nav ul {
+    justify-content: flex-end; 
+    gap: 40px;
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+  }
+
+  .hero--info h1, .hero--info p {
+    text-align: left; 
+  }
+  
+  .hero--info h1 {
+    font-size: 56px;
+  }
+  
+  .card {
+     width: calc(33.333% - 20px); 
+  }
 }

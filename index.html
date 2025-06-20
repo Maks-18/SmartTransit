@@ -1,37 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Website</title>
+    <title>SmartTransit</title>
     <link rel="stylesheet" href="/css/main.css">
+    <style>
+        @font-face {
+            font-family: 'e-Ukraine';
+            src: url('./css/fonts/e-Ukraine-Regular.woff2') format('woff2'),
+                 url('./css/fonts/e-Ukraine-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'e-Ukraine';
+            src: url('./css/fonts/e-Ukraine-Bold.woff2') format('woff2'),
+                 url('./css/fonts/e-Ukraine-Bold.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'e-Ukraine';
+            src: url('./css/fonts/e-Ukraine-Medium.woff2') format('woff2'),
+                 url('./css/fonts/e-Ukraine-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'e-Ukraine';
+            src: url('./css/fonts/e-Ukraine-Light.woff2') format('woff2'),
+                 url('./css/fonts/e-Ukraine-Light.woff') format('woff');
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'e-Ukraine';
+            src: url('./css/fonts/e-Ukraine-Thin.woff2') format('woff2'),
+                 url('./css/fonts/e-Ukraine-Thin.woff') format('woff');
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'e-Ukraine';
+            src: url('./css/fonts/e-Ukraine-UltraLight.woff2') format('woff2'),
+                 url('./css/fonts/e-Ukraine-UltraLight.woff') format('woff');
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'e-Ukraine', sans-serif;
+            font-weight: 400;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
     <div class="wrapper">
-    <header class="container">
-        <span class="logo">SmartTransit</span>
-        <nav>
-            <ul>
-                <li class="active"><a href="#">Домашня сторінка</a></li>
-                <li><a href="#">Про нас</a></li>
-                <li><a href="#">Як це працює?</a></li>
-                <li class="btn"><a href="#">Наші контаки</a></li>
-            </ul>
-        </nav>
-    </header>
+        <header class="container">
+            <div class="logo">
+                <img src="image/Smart.png" alt="Лого SmartTransit">
+                <span>SmartTransit</span>
+            </div>
 
-    <div class="hero container">
-        <div class="hero--info">
-            <h2>Інновації в сфері транспорту</h2>
-            <h1>Розвиток транспорту в Україні та додавання фічей</h1>
-            <p>Це не тільки розвиток транспорту в Україні, а й комфортне використування та розвиток суспільства </p>
-            <button class="btn">Дізнатись більше інформації</button>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#home">Домашня сторінка</a></li>
+                    <li><a href="#how">Як це працює?</a></li>
+                    <li><a href="#Partners">Партнерам</a></li>
+                    <li class="btn"><a href="#contacts">Контакти</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="home" class="hero container">
+            <div class="hero--info">
+                <h2>Стратегічні інновації у сфері транспорту</h2>
+                <h1>Формуємо потужне майбутнє транспорту в Україні</h1>
+                <p>Ми не просто розвиваємо транспортну галузь України, а створюємо інтегровану систему, що гарантує зручність, безпеку та передові технології для кожного користувача. Це потужний крок вперед!</p>
+                <a href="#about" class="btn">Дізнатись більше інформації</a>
+            </div>
         </div>
-        <img src="image/SmartTransitApp(Main).png" alt="">
-    </div>
-    </div>    
-</body>
 
+        <section id="about" class="smarttransit-description container">
+            <h2>Що таке <span class="highlight">SmartTransit</span>?</h2>
+            <p>SmartTransit — це інноваційна транспортна система, створена спеціально для українських реалій. Ми впроваджуємо розумні картки для проїзду, які замінюють застарілі валідатори, впорядковують облік пасажирів і роблять перевезення прозорими.</p>
+
+            <h3>Як це працює?</h3>
+            <ul id="how">
+                <li><strong>Розумна картка</strong> — твій персональний ключ до транспорту. Фото, статус і баланс — все на одному акаунті.</li>
+                <li><strong>Поповнення</strong> — через додаток або термінал на зупинці. Гроші надходять на твій акаунт.</li>
+                <li><strong>Контроль</strong> — ручна перевірка карток через NFC-пристрої контролерів.</li>
+                <li><strong>Розклад в реальному часі</strong> — GPS показує час прибуття та затримки транспорту.</li>
+            </ul>
+
+            <h3>Чому це важливо?</h3>
+            <ul class="why-important">
+                <li>🔒 Безквитковий проїзд скорочується на 90% — більше прозорості, більше інвестицій.</li>
+                <li>🚏 Пасажири отримують точну інформацію про затримки.</li>
+                <li>💳 Все в одному місці: баланс, поїздки, історія.</li>
+                <li>🇺🇦 Розроблено в Україні для українців.</li>
+            </ul>
+
+            <ul id="Partners">
+            <h3>Для партнерів</h3>
+            <p>Ми відкриті до співпраці з муніципалітетами, транспортними компаніями, IT-партнерами та банками. Інтеграція з вашим сервісом можлива через API, а також можлива участь у спільних PR-кампаніях, крос-маркетингових ініціативах та пілотних проєктах.</p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer--content">
+            <div class="footer--column">
+                <h3 class="footer--logo">SmartTransit</h3>
+                <p>Майбутнє транспорту вже тут.</p>
+            </div>
+
+            <div class="footer--column">
+                <h4>Проєкт</h4>
+                <ul>
+                    <li><a href="#about">Про проєкт</a></li>
+                    <li><a href="#how">Як це працює?</a></li>
+                    <li><a href="#contacts">Партнерам</a></li>
+                </ul>
+            </div>
+
+            <div class="footer--column" id="contacts">
+                <h4>Контакти</h4>
+                <p>Email: smarttransit.ua@gmail.com</p>
+                <p>Телефон: +380954078747</p>
+                <p>Telegram: @superman071</p>
+            </div>
+        </div>
+
+        <div class="footer--bottom">
+            <p>&copy; 2025 SmartTransit. Всі права захищено.</p>
+        </div>
+    </footer>
+</body>
 </html>

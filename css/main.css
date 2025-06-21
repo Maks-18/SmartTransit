@@ -1,21 +1,21 @@
 /* ==================== Шрифти ==================== */
 @font-face {
   font-family: 'e-Ukraine Head';
-  src: url('../fonts/e-UkraineHead-Regular.woff2') format('woff2');
+  src: url('./fonts/e-Ukraine-Thin.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'e-Ukraine Text';
-  src: url('../fonts/e-UkraineText-Regular.woff2') format('woff2');
+  src: url('./fonts/e-Ukraine-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'e-Ukraine Text';
-  src: url('../fonts/e-UkraineText-Medium.woff2') format('woff2');
+  src: url('./fonts/e-Ukraine-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
@@ -214,69 +214,45 @@ nav ul .btn a:hover {
 
 /* ==================== Адаптивність ==================== */
 /* ДЛЯ ТЕЛЕФОНІВ */
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
 
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
+  header .logo {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex; 
-  flex-direction: column; 
-  gap: 15px; 
-  align-items: center; 
-  padding: 20px 0;
-}
+  header .logo img {
+    width: 80px;
+    height: auto;
+  }
 
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-size: 18px;
-}
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+  }
 
-.hero--info h1 {
-  font-size: 32px; 
-  text-align: center;
-}
+  nav ul li {
+    margin: 0;
+  }
 
-.hero--info p {
-  font-size: 16px;
-  line-height: 1.6; 
-  text-align: center;
-}
+  nav ul li a,
+  nav ul li.btn a {
+    font-size: 16px;
+  }
 
-.cards-container {
-  display: flex;
-  flex-direction: column; 
-  gap: 20px;
+  .btn a {
+    padding: 6px 14px;
+    border-radius: 8px;
+  }
 }
-
-.card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.footer--content {
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  text-align: center;
-  gap: 20px;
-  padding: 30px 0;
-  border-top: 1px solid #ddd;
-}
-
 
 
 /* 2. АДАПТАЦІЯ ДЛЯ ПЛАНШЕТІВ */
